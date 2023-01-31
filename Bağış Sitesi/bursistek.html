@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Burs İstekleri</title>
+    <link rel="stylesheet" href="css/stylebursistek.css">
+</head>
+<body>
+    <select name="burs" id="scholarshipType" onChange="scholarChange()" required>
+        <optgroup label="Kategori">
+            <option value="all">Tümü</option>
+            <option value="öğrenci">Öğrenci</option>
+            <option value="fatura">Fatura</option>
+            <option value="kira">Kira</option>
+            <option value="gıda">Gıda</option>
+            <option value="sağlık">Sağlık</option>
+        </optgroup>
+        <optgroup label="Sıralama">
+            <option value="reverse_decrease">Son eklenene göre(zaman)</option>
+            <option value="reverse_increase">İlk eklenene göre(zaman)</option>
+            <option value="price_decrease">Azalan(fiyat)</option>
+            <option value="price_increase">Artan(fiyat)</option>
+        </optgroup>
+    </select>
+
+    </select>
+    <nav id="sideNav">
+       <a href="http://127.0.0.1:5500/index.html"><img src="img/home-button.png" alt="Menu" id="menuBtn2"> </a>
+    </nav>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/applicationList.js"></script>
+</body>
+</html>

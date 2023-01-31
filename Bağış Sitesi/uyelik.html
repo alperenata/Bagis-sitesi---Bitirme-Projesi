@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Üyelik Ekranı</title>
+    <link rel="stylesheet" href="css/uyelik.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="form-box">
+        <div class="button-box">
+          <div id="btn"></div>
+          <button type="button" class="toggle-btn" onclick="login()">
+            Giriş Yap
+          </button>
+          <button type="button" class="toggle-btn" onclick="register()">
+            Kayıt Ol
+          </button>
+        </div>
+        <form id="Login" class="input-group">
+            <div class="email-body">
+                <input
+                  type="text"
+                  class="input-field"
+                  placeholder="Mail Adresiniz"
+                  id="loginEmail"
+                  required
+                />
+                <p class="email-tag">@</p>
+                <input
+                  type="text"
+                  class="input-field"
+                  placeholder="gmail.com"
+                  id="loginDomain"
+                  required
+                />
+              </div>
+          <input
+            type="password"
+            class="input-field"
+            placeholder="Şifreniz"
+            id="loginPassword"
+            required
+          />
+          <a href="#"> Şifremi Unuttum</a>
+          <button type="button" onClick="signIn()" class="submit-btn">Giriş</button>
+        </form>
+        <form id="Register" class="input-group">
+          <input
+            type="text"
+            class="input-field"
+            placeholder="Adınız ve Soyadınız"
+            id="fullName"
+            required
+          />
+          <input
+            type="password"
+            class="input-field"
+            placeholder="Şifreniz"
+            id="password"
+            required
+          />
+          <div class="email-body">
+            <input
+              type="text"
+              class="input-field"
+              placeholder="Mail Adresiniz"
+              id="email"
+              required
+            />
+            <p class="email-tag">@</p>
+            <input
+              type="text"
+              class="input-field"
+              placeholder="gmail.com"
+              id="domain"
+              required
+            />
+          </div>
+          <input
+            type="tel"
+            class="input-field"
+            placeholder="Telefon Numaranız"
+            id="phone"
+            required
+          />
+          <a href="#"
+            >Kayıt olarak, şartları, veri politikalarını ve çerezleri kabul
+            edersiniz.</a
+          >
+          <button type="button" onClick="signUp()" class="submit-btn">
+            Kayıt Ol
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <nav id="sideNav">
+      <a href="http://127.0.0.1:5500/index.html"><img src="img/home-button.png" alt="Menu" id="menuBtn2"> </a>
+    </nav>
+    <script>
+      var x = document.getElementById("Login");
+      var z = document.getElementById("Register");
+      var y = document.getElementById("btn");
+
+      function register() {
+        x.style.left = "-400px";
+        z.style.left = "50px";
+        y.style.left = "110px";
+      }
+
+      function login() {
+        x.style.left = "50px";
+        z.style.left = "450px";
+        y.style.left = "0px";
+      }
+    </script>
+    <script src="./js/register.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </body>
+</html>

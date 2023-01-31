@@ -1,0 +1,243 @@
+/******************** General  ***********************/ /*etiketlerin düzenlenmesi*/
+* {box-sizing: border-box;margin: 0;padding: 0;}
+*::-webkit-scrollbar {width: 8px;background-color: #eee;} /*kaydırma çubuğunun kapladığı alanın özellikleri rengi*/
+*::-webkit-scrollbar-track {background-color: #ccc;} /*kaydırma çubuğu harici kısım*/
+*::-webkit-scrollbar-thumb {background-color: var(--color);border-radius: 5px;}/*kaydırma çubuğu kısmı*/
+
+:root {
+    --color: #f67c92; /* f67c92  5c9ef5 */ /* sitenin genel kullanımındaki renk*/
+}
+
+html {
+    scroll-behavior: smooth; /*yumuşak geçiş*/
+}
+body {
+    font-family: sans-serif; /*genel font*/
+}
+
+h1{font-size: 24px;}
+p{font-size: 15px;line-height: 25px; color:#777; text-align: justify;/*iki yana yaslı*/}
+a{text-decoration: none;color:#777;}
+img{max-width: 100%; height: auto;}/*responsive*/
+li{list-style-type: none;}
+form{max-width: 100%; margin: 30px 0;}
+input{width: 100%; padding: 12px; margin-bottom: 15px;outline: none; border: 2px solid var(--color); box-shadow: none; border-radius: 5px;}
+hr{width: 100% ; border:0; border-top: 1px solid var(--color);}
+/******************** General class ******************/
+.container{
+    width: 80%;
+    margin:auto;
+    padding-bottom: 10px;
+}
+
+.text-left{ text-align: left !important;}
+
+.text-right{ text-align: right !important;}
+
+.circle{display:inline-block;/*span olarak vermiştik,en boy değerleri tanımlayabilmek adına çevirmemiz gerek*/
+    width: 12px;
+    height: 12px;
+    margin: 15px 0px;
+    background-color: var(--color);
+    border-radius: 50%;
+    }
+
+.line {
+    line-height: 8px;
+}
+.line-1, .line-2, .line-3{
+    display: inline-block;
+    background-color:var(--color);
+}
+.line-1{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+.line-2{
+    width: 80px;
+    height:1px;
+}
+
+.line-3{
+    width: 60px;
+    height:1px;
+}
+
+
+.btn{
+    padding: 15px 35px ;
+    outline: none;
+    border: 2px solid var(--color);
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 1s;
+}
+
+.btn:hover {
+    background-color: var(--color);
+}
+
+/********************  Hader *************************/
+#header {
+    height: 100%;
+    background: url(../img/background.png) center /contain no-repeat;
+    background-color: #EAF3FA;
+    margin-bottom: 40px;
+}
+
+.logo{ width: 200px; margin-top: 10px; margin-bottom: 40px; margin-left: -45px;}
+.header-content{max-width: 400px;}
+.read-more{margin:20px 0 30px 0;}
+
+#sideNav{
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    right:-250px;
+    top:0;
+    background-color: var(--color);
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5px;
+}
+
+#sideNav ul li {margin:30px;}
+#sideNav ul li:first-child {margin-top:45px;}
+#sideNav ul li a{color:#fff}
+#menuBtn{background-color: var(--color);
+width: 50px;position: fixed;right:40px;top:35px;border-radius: 5px;z-index: 1;cursor:pointer;}
+/******************** About Us and Offer *************/
+#aboutUs,#offer{
+    padding: 70px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.about-left{
+    flex-basis: 50%;
+}
+.about-right{
+    flex-basis: 50%;
+}
+
+.about-left img {
+    border-radius: 50px; /*görselin kenarları*/
+}
+
+.about-content{
+    max-width: 400px;
+    display: inline-block;
+}
+
+.about-content h2 {
+    font-size:18px;
+    margin:50px 0 10px;
+    font-style: italic;
+}
+.about-content h3 {
+    font-size:20px;
+    font-style: italic;
+    color: #757575
+}
+#offer .btn {margin: 30px 0px;}
+/******************** Features ***********************/
+#features{
+    padding: 70px 0;
+}
+.features-row{display: flex; flex-wrap: wrap; align-items: center;justify-content: space-around;width: 80%; margin: auto;}
+.features-col{flex-basis: 25%; text-align: center;}
+.features-img{width: 100px;}
+.features-col h4{margin-bottom: 15px; font-size: 20px; font-weight: 400;}
+.features-col p{text-align: center;}
+.features-btn {margin: 80px auto 0; display: flex;justify-content: center;align-items: flex-end;}
+.features-btn .line{text-align:right; margin-right: 25px;}
+
+
+/******************** Courses - Contact **************/
+#course, #contact {padding: 70px 0;}
+.courses-row, .contact-row{ display: flex; align-items: center;flex-wrap: wrap;}
+.courses-left{flex-basis: 50%;}
+.courses-right{flex-basis: 50%;}
+    .contact-left{flex-basis: 50%;}
+    .contact-right{flex-basis: 50%;}
+.courses-content{max-width: 400px;}
+.courses-content .btn{margin: 30px 0;}
+
+
+/******************** Contact ************************/
+
+.btn-box{width: 100%; display: flex; justify-content: space-between;}
+
+.btn-box .btn {flex-basis: 48;}
+/******************** Footer *************************/
+#footer{ margin: 30px 0}
+
+.footer-row{display: flex; flex-wrap: wrap; align-items: center;justify-content: space-around;}
+.footer-left{flex-basis: 30%;}
+.footer-right{flex-basis: 70%; margin-top:50px;}
+
+.footer-links{display: flex; flex-wrap: wrap; align-items: center;justify-content: space-around;}
+.link-title h4{ margin-bottom: 15px; color:var(--color);}
+.copyright small, .link-title small{
+    display: block;
+    font-size: 14px;
+    color: #777;
+    line-height: 1.8;
+}
+.copyright img{
+    display: block;
+    width: 200px;
+    margin: 40px 0 ;
+}
+/******************** Social Icons *******************/
+.social-icon{position: fixed; top:40%;z-index: 1;left: 0;}
+.social-icon a {display: block;/* alt alta gelmesi adına
+*/ margin: 0 0 15px 20px; cursor:pointer; font-size: 25px;}
+.social-icon a:hover {
+    transform:scale(2);/*hover olunca boyut değişimi*/
+}
+/******************** Responsive *********************/
+
+@media only screen and (max-width: 700px) {
+
+/******************** General  **********************/
+h1 {
+    font-size: 22px;
+}
+.btn{
+    padding: 10px 16 px;
+}
+.btn{ margin: 0px 45px;}
+/******************** Header ************************/
+#header{
+    height: 75vh;
+    background: none;
+}
+.logo{width: 175px;}
+
+#sideNav {max-width: 200px;}
+
+#menuBtn { width: 40px;
+right: 20px;}
+/******************** About Us  *********************/
+.about-left,.about-right{flex-basis: 100%;}
+
+.about-content{margin: 50px 20px 0px;}
+/********* features, course, contact and footer ****************/
+.features-col{ flex-basis: 100%; margin-bottom: 20px;}
+.contact-left,.contact-right,.courses-left,.courses-right,.footer-left,.footer-right {flex-basis:100%;}
+.courses-left,.courses-right{ margin-top:75px;}
+.link-title{flex-basis: 50%; margin-bottom: 30px;}
+#courses img{display:none;}
+
+
+
+
+}
+
+#logout { display:none}
+#bursistekonay { display:none}

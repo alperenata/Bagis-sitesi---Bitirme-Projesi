@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ödeme Sayfası</title>
+
+    <link rel="stylesheet" href="css/odeme.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <form action="">
+
+        <div class="row">
+
+            <div class="col">
+
+                <h3 class="title">FATURA ADRESİ</h3>
+
+                <div class="inputBox">
+                    <span>Adınız ve soyadınız :</span>
+                    <input type="text" placeholder="Tarık Çamurşen">
+                </div>
+                <div class="inputBox">
+                    <span>email :</span>
+                    <input type="email" placeholder="bitirme@proje.com">
+                </div>
+                <div class="inputBox">
+                    <span>adres :</span>
+                    <input type="text" placeholder="mahalle-sokak-ilçe">
+                </div>
+                <div class="inputBox">
+                    <span>Şehir :</span>
+                    <input type="text" placeholder="İstanbul">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>Ülke :</span>
+                        <input type="text" placeholder="Türkiye">
+                    </div>
+                    <div class="inputBox">
+                        <span>Posta kodu :</span>
+                        <input type="text" placeholder="123 456">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col">
+
+                <h3 class="title">Ödeme Bölümü</h3>
+
+                <div class="inputBox">
+                    <span>Kabul edilen Kartlar :</span>
+                    <img src="img/card_img.png" alt="">
+                </div>
+                <div class="inputBox">
+                    <span>Kart Üzerindeki İsim :</span>
+                    <input type="text" placeholder="Alperen Ata">
+                </div>
+                <div class="inputBox">
+                    <span>Kart Numarası :</span>
+                    <input type="number" placeholder="1111-2222-3333-4444">
+                </div>
+                <div class="inputBox">
+                    <span>Skt Ay :</span>
+                    <input type="text" placeholder="Mayıs">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>Skt Yı<link rel="manifest" href="manifest.json"> :</span>
+                        <input type="number" placeholder="2022">
+                    </div>
+                    <div class="inputBox">
+                        <span>CVV :</span>
+                        <input type="text" placeholder="1234">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <input type="button" value="Öde ve Önceki Sayfaya Dön" class="submit-btn" onClick="paid()">
+
+    </form>
+
+</div>
+
+<nav id="sideNav">
+    <a href="http://127.0.0.1:5500/index.html"><img src="img/home-button.png" alt="Menu" id="menuBtn2"> </a>
+ </nav>
+ <script src="./js/payment.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+ <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Üyelik Ekranı</title>
+    <link rel="stylesheet" href="css/bursbasvuru.css">
+
+</head>
+<body>
+    <div class="main">
+        <div class="form-box">
+            <div class="button-box2">
+            <button type="button" class="toggle-btn" >Burs Başvurusu</button>
+
+            </div>
+
+
+            <form id="Burs" class="input-group">
+                <label for="burs">Burs Çeşidi:</label>
+                    <select name="burs" id="scholarshipType" onChange="scholarChange()" required>
+                        <option value="ogrenci">Öğrenci</option>
+                        <option value="fatura">Fatura</option>
+                        <option value="kira">Kira</option>
+                        <option value="gıda">Gıda</option>
+                        <option value="sağlık">Sağlık</option>
+                    </select><br><br>
+                    <input type="text" class="input-field" placeholder="Iban" onChange="getIban(this.value)" required>
+                <input type="number" class="input-field" placeholder="İstenen Tutar" onChange="getPrice(this.value)" required>
+                <input type="text" class="input-field" placeholder="Açıklama" onChange="getDescription(this.value)" required><br><br>
+                <label for="myfile">Belgeler:</label>
+                    <input type="file" id="document" name="myfile" onChange="getFile()" required><br><br>
+                <a href="#">Başvuru yaparak, şartları, veri politikalarını ve çerezleri kabul edersiniz.</a>
+                <button type="button" class="submit-btn" onClick="addApplication()">Başvur</button>
+            </form>
+        </div>
+    </div>
+    <nav id="sideNav">
+            <a href="http://127.0.0.1:5500/index.html"><img src="img/home-button.png" alt="Menu" id="menuBtn2"> </a>
+    </nav>
+    <script src="./js/application.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+</html>

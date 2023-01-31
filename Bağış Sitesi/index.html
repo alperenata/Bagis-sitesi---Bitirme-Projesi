@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bağış Yap</title>
+    <!-- Css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" 
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header">
+      <div class="container">
+        <a href="index.html"
+          ><img class="logo" src="img/logo.png" alt="Bağış Logo"
+        /></a>
+        <div class="header-content">
+          <h1>Bağış Yap Platformu</h1>
+          <span class="circle"></span>
+          <p>
+            Bağış vermek isteyen ve bağışa ihtiyacı olan kişileri bir araya
+            getiren platform.
+          </p>
+          <button class="btn read-more"><a href="http://127.0.0.1:5500/bursistek.html">Bağış Yap</a></button>
+          <div class="line">
+            <span class="line-1"></span><br />
+            <span class="line-2"></span><br />
+            <span class="line-3"></span><br />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Side nav -->
+    <nav id="sideNav">
+      <ul>
+        <li><a href="#header">Anasayfa</a></li>
+        <li><a href="#aboutUs">Hakkımızda</a></li>
+        <li><a href="#features">Özellikler</a></li>
+        <li><a href="#courses">Kategoriler</a></li>
+        <li><a href="#offer">İşleyiş</a></li>
+        <li><a href="#contact">İletişim</a></li>
+        <li id="uyelik"><a href="http://127.0.0.1:5500/uyelik.html">Üyelik Sayfası</a></li>
+        <li id="bursBasvuru" onClick="loginControl()">
+          <a style="cursor: pointer;">Burs Başvurusu</a>
+        </li>
+        <li><a href="http://127.0.0.1:5500/bursistek.html">Burs İstekleri</a></li>
+        <li id="bursistekonay"><a href="http://127.0.0.1:5500/bursistekonay.html">Burs İstek Onay</a></li>
+        <li id="logout" onClick="logout()"><a href="http://127.0.0.1:5500/uyelik.html">Logout</a></li>
+      </ul>
+      <img src="img/menu.png" alt="Menu" id="menuBtn" />
+    </nav>
+
+    <div class="container">
+      <!-- About Us -->
+      <section id="aboutUs">
+        <div class="about-left text-left">
+          <img src="img/about.png" alt="about" />
+        </div>
+
+        <div class="about-right text-right">
+          <div class="about-content">
+            <h1>Hakkımızda</h1>
+            <span class="circle"></span>
+            <p class="text-right">
+              Bağış almak isteyenlerin ihtiyacına uygun kategoride başvuruda
+              bulunabilmesini amaçlıyoruz.<br /><br />
+              *Bağış veren ve bağış alanların bilgileri istekleri dışında
+              paylaşılmayacak.
+            </p>
+            <br />
+            <div class="line">
+              <span class="line-1"></span><br />
+              <span class="line-2"></span><br />
+              <span class="line-3"></span><br />
+            </div>
+            <h2></h2>
+            <h3></h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section id="features">
+        <div class="features-row">
+          <div class="features-col">
+            <img src="img/features-1.png" alt="" />
+			<h4>Kolay Başvuru</h4>
+            <p>
+              Üyelik sonrası birkaç adımda bağış istediğinde bulunabilirsiniz.
+            </p>
+          </div>
+          <div class="features-col">
+            <img src="img/features-2.png" alt="" />
+            <h4>Adil Denetim</h4>
+            <p>Bütün başvurular özenle denetlenmektedir.</p>
+          </div>
+          <div class="features-col">
+            <img src="img/features-3.png" alt="" />
+            <h4>Pratik Bağış Yapma</h4>
+            <p>
+              Bağış yapma işlemini üyelik olmadan hızlıca
+              tamamlayabilirsiniz.
+            </p>
+          </div>
+        </div>
+
+        <div class="features-btn">
+          <div class="line">
+            <span class="line-1"></span><br />
+            <span class="line-2"></span><br />
+            <span class="line-3"></span><br />
+          </div>
+        </div>
+      </section>
+
+      <!-- Burs kategori  -->
+      <section id="courses">
+        <div class="courses-row">
+          <div class="courses-left text-left">
+            <div class="courses-content">
+              <h1>
+                Hangi Kategorilerde <br />
+                Bağış Yapabilirim?
+              </h1>
+              <span class="circle"></span>
+              <p>
+                Öğrenci Bursu<br />
+                Fatura Yardımı<br />
+                Gıda Yardımı<br />
+                Kira Yardımı<br />
+                Sağlık Yardımı <br />
+                gibi kategorilerden istediğinizi seçerek ilgili alanda <br />
+                yardıma ihtiyacı olan kişilere destekte bulanabilirsiniz.
+              </p>
+              <br />
+              <button class="btn"><a href="http://127.0.0.1:5500/uyelik.html">Burs Başvurusu Yap</a></button>
+              <div class="line">
+                <span class="line-1"></span><br />
+                <span class="line-2"></span><br />
+                <span class="line-3"></span><br />
+              </div>
+            </div>
+          </div>
+          <div class="courses-right text-right">
+            <img src="img/course.png" alt="courses" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Offer -->
+      <section id="offer">
+        <div class="about-left text-left">
+          <img src="img/offer.png" alt="offer" />
+        </div>
+
+        <div class="about-right text-right">
+          <div class="about-content">
+            <h1>İşleyiş</h1>
+            <span class="circle"></span>
+            <p class="text-right">
+              Bağış başvurusunda bulunmak isteyenler kolayca üye olabilecekler.<br />
+              <br />
+              Üyelik sonrası başvuru sayfasında ihtiyaçlarına göre bağış başvurusu istediği gönderebilecekler.
+              <br />
+              <br />
+              Bu istekler sistem yöneticisi tarafından denetlendikten sonra yayına alınacak. <br />
+              <br />
+              Yayına alınan istekler bağışverenler tarafından burs vermeye hazır olacak. <br />
+              <br />
+            </p>
+            <br />
+            <button class="btn"><a href="http://127.0.0.1:5500/bursistek.html">Bağış Yap</a></button>
+            <div class="line">
+              <span class="line-1"></span><br />
+              <span class="line-2"></span><br />
+              <span class="line-3"></span><br />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contant - same burs kategori-->
+      <section id="contact">
+        <div class="contact-row">
+          <div class="contact-left text-left">
+            <div class="contact-content">
+              <h1>Destek</h1>
+              <form action="contact-content">
+                <input type="text" placeholder="Adınız ve Soyadınız" />
+                <input type="email" placeholder="E-mail Adresiniz" />
+                <input type="textarea" placeholder="Mesaj" />
+                <!--       <input  type="radio" name="bagis" value="basig-al" checked> Bağış Al
+                        <input  type="radio" name="bagis" value="bagis-yap"> Bağış Yap <br>-->
+
+                <div class="btn-box">
+                  <button class="btn">Gönder</button>
+                  <!--      <button><input type="reset"></button>-->
+                </div>
+              </form>
+              <div class="line">
+                <span class="line-1"></span><br />
+                <span class="line-2"></span><br />
+                <span class="line-3"></span><br />
+              </div>
+            </div>
+          </div>
+          <div class="contact-right text-right">
+            <img src="img/contact.png" alt="contact" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="footer-row">
+          <hr />
+          <div class="footer-left">
+            <div class="copyright">
+              <img src="img/logo.png" alt="logo" />
+              <small>Bitirme Projesi</small>
+            </div>
+          </div>
+          <div class="footer-right">
+            <div class="footer-links">
+              <div class="link-title">
+                <h4>Burs İşlemleri</h4>
+                <small><a href="http://127.0.0.1:5500/uyelik.html">Üyelik Sayfası</a></small>
+                <small><a href="http://127.0.0.1:5500/bursbasvuru.html">Burs Başvurusu</a></small>
+              </div>
+              <div class="link-title">
+                <h4>Bağış Yap</h4>
+                <small><a href="http://127.0.0.1:5500/bursistek.html">Burs İstekleri</a></small>
+                <small><a href="#"></br></a></small>
+              </div>
+			  
+              <div class="link-title">
+                <h4>Destek</h4>
+                <small
+                  ><a href="mailto:mail@adres.com">iletisim@mail.com</a></small
+                >
+                <small><a href="tel:5490000000">549 000 00 00</a></small>
+              </div>
+			  
+			  <div class="link-title">
+                <h4></h4>
+                <small><a href="#"></br></a></small>
+                <small><a href="#"></br></a></small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Social Icon -->
+      <div class="social-icon">
+        <a href="#"><i class="bx bxl-facebook"></i></a>
+        <!--boxicon-->
+        <a href="#"><i class="bx bxl-twitter"></i></a>
+        <a href="#"><i class="bx bxl-instagram"></i></a>
+        <a href="#"><i class="bx bxl-linkedin"></i></a>
+      </div>
+
+      <!-- Script -->
+      <script>
+        let menuBtn = document.getElementById("menuBtn");
+        let sideNav = document.getElementById("sideNav");
+        const uyelik = document.getElementById("uyelik")
+        const logOut = document.getElementById("logout");
+        const bursIstek = document.getElementById("bursistekonay");
+
+        sideNav.style.right = "-250px";
+        menuBtn.onclick = function () {
+          if (sideNav.style.right === "-250px") {
+            sideNav.style.right = "0px";
+          } else {
+            sideNav.style.right = "-250px";
+          }
+        };
+
+        if(localStorage.getItem('user')) {
+          uyelik.style.display = 'none';
+          logOut.style.display = 'block';
+
+          JSON.parse(localStorage.getItem('user')).role === 'admin' ? bursIstek.style.display = 'block' : bursIstek.style.display = 'none';
+        }
+
+        const logout = () => localStorage.clear();
+
+        const loginControl = () => {
+          if (!localStorage.getItem("user")) {
+            return alert("Başvuru yapabilmeniz için üye girişi yapmalısınız!");
+          }
+          return window.location.replace("http://127.0.0.1:5500/bursbasvuru.html");
+        };
+      </script>
+    </div>
+  </body>
+</html>
